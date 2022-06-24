@@ -1,0 +1,217 @@
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    --Font-size: 16px;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;	
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: var(--Dark-Grayish-Red);
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 120vh;
+    height: 70vh;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-color: rgb(251, 231, 235);
+    background-repeat: no-repeat;
+}
+
+.right{
+    width: 45%;
+    height: 100%;
+}
+
+#right-image{
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    width: 55%;
+    height: 100%;
+    padding: 4rem 12rem;
+}
+
+.txt-btn{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    top: -45px;
+}
+
+#logo-image{
+    width: 13rem;
+}
+
+#title{
+    font-size: 56px;
+    letter-spacing: 15px;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+span{
+    color: var(--Desaturated-Red);
+    font-weight: lighter;
+}
+
+#text{
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--Desaturated-Red);
+}
+
+#input{
+    width: 99%;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid var(--Soft-Red);
+    display: inline-block;
+    padding: 3px 40px;
+}
+
+#dugme{
+    width: 21%;
+    height: 51px;
+    position: relative;
+    top: -50px;
+    left: 298px;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, rgb(248, 232, 232), rgb(248, 124, 115));
+    border: none;
+}
+
+#strelica{
+    color: white;
+    padding: 16px 28px;
+}
+
+.error-klasa{
+    position: relative;
+    top: -40px;
+    font-size: 13px;
+    margin: 0;
+    color: red;
+    left: 40px;
+}
+
+.good-klasa{
+    position: relative;
+    top: -40px;
+    font-size: 13px;
+    margin: 0;
+    color: rgb(47, 255, 0);
+    left: 40px;
+}
+
+@media only screen and (max-width: 640px) {
+    .card {
+        display: flex;
+        align-items: center;
+        width: 40vh;
+        height: 75vh;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-color: rgb(251, 231, 235);
+        background-repeat: no-repeat;
+        flex-direction: column-reverse; 
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-between;
+        width: 95%;
+        height: 100%;
+        padding: 1rem;
+    }
+    #title {
+        font-size: 35px;
+        letter-spacing: 5px;
+        font-weight: bold;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #logo-image {
+        width: 10rem;
+        position: relative;
+        top: -215px;
+    }
+
+    #right-image{
+        content: url(images/hero-mobile.jpg);
+    }
+
+    .right {
+        width: 100%;
+        height: 32%;
+        position: relative;
+        top: 60px;
+    }
+
+    .txt-btn {
+        height: 39vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        top: 0px;
+        padding: 0px 26px;
+    }
+
+    #input {
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        border: 1px solid var(--Soft-Red);
+        display: inline-block;
+        padding: 3px 40px;
+    }
+
+    #dugme{
+        width: 25%;
+        height: 51px;
+        position: relative;
+        top: -51px;
+        left: 215px;
+    }
+
+    #text{
+        text-align: center;
+        font-size: 13px;
+    }
+
+}
